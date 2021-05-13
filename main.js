@@ -12,8 +12,15 @@ heart.addEventListener("click",(e)=>{
   e.preventDefault();
   mimicServerCall()
   .then (function (response){
-    heart.textContent=FULL_HEART;
-    heart.classList.add("activated-heart");
+    if (heart.textContent===EMPTY_HEART)
+    {
+      heart.textContent=FULL_HEART;
+      heart.classList.add("activated-heart");
+    }
+    else {
+      heart.textContent=EMPTY_HEART;
+      heart.classList.remove("activated-heart");
+    }
 
   })
   .catch ((error)=>{
@@ -27,13 +34,6 @@ heart.addEventListener("click",(e)=>{
 
 })
 
-console.log("heart.textContent===FULL_HEART")
-if (heart.textContent===FULL_HEART){
-heart.addEventListener("click",()=>{
-  heart.textContent=EMPTY_HEART;
-  heart.classList.remove("activated-heart");
-})
-}
 }
 
 //------------------------------------------------------------------------------
