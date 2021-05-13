@@ -14,13 +14,6 @@ heart.addEventListener("click",(e)=>{
   .then (function (response){
     heart.textContent=FULL_HEART;
     heart.classList.add("activated-heart");
-
-  if (heart.textContent===FULL_HEART){
-    heart.addEventListener("click",()=>{
-      heart.textContent=EMPTY_HEART;
-      heart.classList.remove("activated-heart");
-    })
-  }
   })
   .catch ((error)=>{
     modal.classList.remove("hidden")
@@ -30,7 +23,13 @@ heart.addEventListener("click",(e)=>{
       modal.classList.add("hidden")
     } ,3000);
   });
-
+  
+    if (heart.textContent===FULL_HEART){
+      heart.addEventListener("click",()=>{
+        heart.textContent=EMPTY_HEART;
+        heart.classList.remove("activated-heart");
+      })
+    }
 })
 }
 //------------------------------------------------------------------------------
