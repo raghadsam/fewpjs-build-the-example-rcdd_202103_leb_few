@@ -27,6 +27,12 @@ heart.addEventListener("click",(e)=>{
 })
 
 }
+if (heart.textContent===FULL_HEART){
+  heart.addEventListener("click",()=>{
+    heart.textContent=EMPTY_HEART;
+    heart.classList.remove("activated-heart");
+  })
+}
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
 //------------------------------------------------------------------------------
