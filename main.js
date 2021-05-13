@@ -3,15 +3,14 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
-let like=document.getElementsByClassName("like")[0];
+let like=document.querySelectorAll(".like");
 let modalMessage=document.getElementById("modal-message");
 let modal=document.getElementById("modal");
-let heart=document.getElementsByClassName("like-glyph")[0];
+let heart=document.querySelectorAll(".like-glyph");
 like.addEventListener("click",(e)=>{
   e.preventDefault();
   mimicServerCall()
   .then (function (response){
-    return response.json();
     heart.textContent=FULL_HEART;
     heart.classList.add("activated-heart");
 
