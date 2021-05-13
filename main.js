@@ -15,7 +15,7 @@ like.addEventListener("click",(e)=>{
   })
   .catch ((error)=>{
     modal.classList.remove("hidden")
-    modalMessage.innerHTML=error
+    modalMessage.innerHTML=error.message;
     //throw ("Error",error);
     setTimeout(function(){
       modal.classList.add("hidden")
