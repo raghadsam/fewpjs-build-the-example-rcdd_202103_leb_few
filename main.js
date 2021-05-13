@@ -6,7 +6,6 @@ const FULL_HEART = '♥'
 let modalMessage=document.getElementById("modal-message");
 let modal=document.getElementById("modal");
 let hearts=document.getElementsByClassName("like-glyph");
-console.log(hearts)
 for(const heart of hearts ){
 heart.addEventListener("click",(e)=>{
   e.preventDefault();
