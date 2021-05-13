@@ -6,7 +6,7 @@ const FULL_HEART = '♥'
 let like=document.getElementsByClassName("like")[0];
 let modalMessage=document.getElementById("modal-message");
 let modal=document.getElementById("modal");
-let heart=document.getElementsByClassName("like-glyph");
+let heart=document.getElementsByClassName("like-glyph")[0];
 like.addEventListener("click",(e)=>{
   e.preventDefault();
   mimicServerCall()
