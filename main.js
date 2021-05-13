@@ -11,7 +11,15 @@ like.addEventListener("click",(e)=>{
   e.preventDefault();
   mimicServerCall()
   .then (function (response){
-    return response.json();
+    return heart.textContent=FULL_HEART;
+    heart.classList.add("activated-heart");
+  })
+  if (heart.textContent===FULL_HEART){
+    heart.addEventListener("click",()=>{
+      heart.textContent=EMPTY_HEART;
+      heart.classList.remove("activated-heart");
+    })
+  }
   })
   .catch ((error)=>{
     modal.classList.remove("hidden")
@@ -21,15 +29,7 @@ like.addEventListener("click",(e)=>{
       modal.classList.add("hidden")
     } ,3000);
   });
-  heart.textContent=FULL_HEART;
-  heart.classList.add("activated-heart");
-})
-if (heart.textContent===FULL_HEART){
-  heart.addEventListener("click",()=>{
-    heart.textContent=EMPTY_HEART;
-    heart.classList.remove("activated-heart");
-  })
-}
+  
 
 
 //------------------------------------------------------------------------------
