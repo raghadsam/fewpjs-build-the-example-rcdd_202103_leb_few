@@ -24,13 +24,13 @@ heart.addEventListener("click",(e)=>{
     } ,3000);
   });
 
-    if (heart.textContent===FULL_HEART){
-      heart.addEventListener("click",()=>{
-        heart.textContent=EMPTY_HEART;
-        heart.classList.remove("activated-heart");
-      })
-    }
 })
+if (heart.textContent===FULL_HEART){
+  heart.addEventListener("click",()=>{
+    heart.textContent=EMPTY_HEART;
+    heart.classList.remove("activated-heart");
+  })
+}
 }
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
