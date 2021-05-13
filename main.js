@@ -10,8 +10,9 @@ let heart=document.getElementsByClassName("like-glyph")[0];
 like.addEventListener("click",(e)=>{
   e.preventDefault();
   mimicServerCall()
-  .then (function (){
-    return heart.textContent=FULL_HEART;
+  .then (function (response){
+    return response.json();
+    heart.textContent=FULL_HEART;
     heart.classList.add("activated-heart");
   })
   if (heart.textContent===FULL_HEART){
@@ -29,7 +30,7 @@ like.addEventListener("click",(e)=>{
       modal.classList.add("hidden")
     } ,3000);
   });
-
+  
 
 
 //------------------------------------------------------------------------------
