@@ -28,6 +28,7 @@ heart.addEventListener("click",(e)=>{
 
 }
 for(const heart of hearts ){
+  console.log("heart.textContent===FULL_HEART")
 if (heart.textContent===FULL_HEART){
   heart.addEventListener("click",()=>{
     heart.textContent=EMPTY_HEART;
