@@ -14,6 +14,14 @@ heart.addEventListener("click",(e)=>{
   .then (function (response){
     heart.textContent=FULL_HEART;
     heart.classList.add("activated-heart");
+
+      console.log("heart.textContent===FULL_HEART")
+    if (heart.textContent===FULL_HEART){
+      heart.addEventListener("click",()=>{
+        heart.textContent=EMPTY_HEART;
+        heart.classList.remove("activated-heart");
+      })
+    }
   })
   .catch ((error)=>{
     modal.classList.remove("hidden")
@@ -27,15 +35,7 @@ heart.addEventListener("click",(e)=>{
 })
 
 }
-for(const heart of hearts ){
-  console.log("heart.textContent===FULL_HEART")
-if (heart.textContent===FULL_HEART){
-  heart.addEventListener("click",()=>{
-    heart.textContent=EMPTY_HEART;
-    heart.classList.remove("activated-heart");
-  })
-}
-}
+
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
 //------------------------------------------------------------------------------
