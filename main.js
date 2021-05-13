@@ -5,8 +5,9 @@ const FULL_HEART = '♥'
 // Your JavaScript code goes here!
 let modalMessage=document.getElementById("modal-message");
 let modal=document.getElementById("modal");
-let heart=document.getElementsByClassName("like-glyph");
+let hearts=document.getElementsByClassName("like-glyph");
 console.log(heart)
+for(let heart of hearts ){
 heart.addEventListener("click",(e)=>{
   e.preventDefault();
   mimicServerCall()
@@ -31,7 +32,7 @@ heart.addEventListener("click",(e)=>{
   });
 
 })
-
+}
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
 //------------------------------------------------------------------------------
