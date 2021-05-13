@@ -3,11 +3,9 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
-let like=document.querySelectorAll(".like");
-
 let modalMessage=document.getElementById("modal-message");
 let modal=document.getElementById("modal");
-let heart=document.querySelectorAll(".like-glyph");
+let heart=document.getElementsByClassName("like-glyph");
 console.log(heart)
 heart.addEventListener("click",(e)=>{
   e.preventDefault();
