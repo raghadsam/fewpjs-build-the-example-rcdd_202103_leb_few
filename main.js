@@ -27,7 +27,7 @@ heart.addEventListener("click",(e)=>{
     modalMessage.innerHTML=error.message;
     throw ("Error",error);
     setTimeout(function(){
-      modal.className="hidden"
+      modal.classList.add("hidden")
     } ,3000);
   });
 
