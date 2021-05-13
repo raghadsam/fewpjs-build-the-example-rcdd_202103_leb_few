@@ -23,7 +23,7 @@ heart.addEventListener("click",(e)=>{
       modal.classList.add("hidden")
     } ,3000);
   });
-  
+
     if (heart.textContent===FULL_HEART){
       heart.addEventListener("click",()=>{
         heart.textContent=EMPTY_HEART;
